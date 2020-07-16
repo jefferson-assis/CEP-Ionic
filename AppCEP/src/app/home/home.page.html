@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Consulta de CEP
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label color="primary"> Digite um CEP: </ion-label>
+                    <ion-input [(ngModel)]="cep"> </ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-button color="warning" expand="block" (click)="consultaCep()">Consultar</ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label position="stacked" color="primary">Logradouro: </ion-label>
+                    <p>{{end.logradouro}}</p>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label position="stacked" color="primary">Bairro: </ion-label>
+                    <p>{{end.bairro}}</p>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label position="stacked" color="primary">Cidade: </ion-label>
+                    <p>{{end.localidade}}</p>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label position="stacked" color="primary">Estado: </ion-label>
+                    <p>{{end.uf}}</p>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
